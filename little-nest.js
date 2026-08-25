@@ -28,7 +28,6 @@ window.RochePlugin.register({
             }
             .roche-plugin-nest * { box-sizing: border-box; }
             
-            /* 顶部与选择器 */
             .nest-select-wrap { margin-bottom: 20px; }
             .nest-select { 
               width: 100%; background: #fff; color: #5c4b43; 
@@ -37,36 +36,23 @@ window.RochePlugin.register({
               box-shadow: 0 4px 10px rgba(212, 163, 115, 0.1);
             }
             
-            /* 主体双栏布局 */
             .nest-layout {
-              flex: 1;
-              display: flex;
-              gap: 20px;
-              overflow: hidden;
+              flex: 1; display: flex; gap: 20px; overflow: hidden;
             }
             
-            /* 左侧：互动舞台 */
             .nest-left {
-              flex: 1;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              background: #fff;
-              border-radius: 20px;
-              border: 2px dashed #fae1dd;
-              padding: 20px;
-              position: relative;
+              flex: 1; display: flex; flex-direction: column; align-items: center;
+              justify-content: center; background: #fff; border-radius: 20px;
+              border: 2px dashed #fae1dd; padding: 20px; position: relative;
               box-shadow: inset 0 0 20px rgba(250, 225, 221, 0.3);
             }
             
-            /* 对话气泡 */
             .nest-bubble {
-              background: #fdf5f2; border: 1px solid #fae1dd;
-              border-radius: 16px; padding: 12px 20px; margin-bottom: 20px;
-              max-width: 80%; text-align: center; font-size: 15px; line-height: 1.5;
-              position: relative; box-shadow: 0 4px 8px rgba(212, 163, 115, 0.1);
-              transition: all 0.3s ease; opacity: 0; transform: translateY(10px);
+              background: #fdf5f2; border: 1px solid #fae1dd; border-radius: 16px; 
+              padding: 12px 20px; margin-bottom: 20px; max-width: 80%; text-align: center; 
+              font-size: 15px; line-height: 1.5; position: relative; 
+              box-shadow: 0 4px 8px rgba(212, 163, 115, 0.1); transition: all 0.3s ease; 
+              opacity: 0; transform: translateY(10px);
             }
             .nest-bubble.show { opacity: 1; transform: translateY(0); }
             .nest-bubble::after {
@@ -74,7 +60,6 @@ window.RochePlugin.register({
               border-width: 10px 10px 0; border-style: solid; border-color: #fdf5f2 transparent transparent transparent;
             }
             
-            /* 头像与状态 */
             .nest-avatar-wrap { position: relative; margin-bottom: 16px; }
             .nest-avatar {
               width: 100px; height: 100px; border-radius: 50%; object-fit: cover;
@@ -95,48 +80,29 @@ window.RochePlugin.register({
             .nest-btn:hover { background: #d4a373; color: #fff; transform: scale(1.05); }
             .nest-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
             
-            /* 右侧：生活碎片面板 */
             .nest-right {
-              width: 320px;
-              background: #fff;
-              border-radius: 20px;
-              border: 1px solid #fae1dd;
-              box-shadow: 0 8px 24px rgba(212, 163, 115, 0.1);
-              display: flex;
-              flex-direction: column;
-              overflow: hidden;
+              width: 320px; background: #fff; border-radius: 20px; border: 1px solid #fae1dd;
+              box-shadow: 0 8px 24px rgba(212, 163, 115, 0.1); display: flex; flex-direction: column; overflow: hidden;
             }
             .frag-header {
-              padding: 16px 20px;
-              font-size: 16px;
-              font-weight: bold;
-              border-bottom: 1px solid #fdf5f2;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
+              padding: 16px 20px; font-size: 16px; font-weight: bold; border-bottom: 1px solid #fdf5f2;
+              display: flex; justify-content: space-between; align-items: center;
             }
-            .frag-tabs {
-              display: flex;
-              border-bottom: 1px solid #fdf5f2;
-            }
+            .frag-tabs { display: flex; border-bottom: 1px solid #fdf5f2; }
             .frag-tab {
               flex: 1; text-align: center; padding: 12px 0; font-size: 13px;
               color: #a0938d; cursor: pointer; transition: 0.2s;
             }
             .frag-tab.active { color: #d4a373; font-weight: bold; border-bottom: 2px solid #d4a373; }
             
-            .frag-content {
-              flex: 1; padding: 20px; overflow-y: auto; font-size: 14px;
-            }
+            .frag-content { flex: 1; padding: 20px; overflow-y: auto; font-size: 14px; }
             .frag-panel { display: none; animation: fadeIn 0.3s; }
             .frag-panel.active { display: block; }
             @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
             
-            /* 今日计划细节 */
             .frag-progress-bar {
               display: flex; justify-content: space-between; align-items: center;
-              font-size: 12px; color: #a0938d; margin-bottom: 16px;
-              letter-spacing: 1px;
+              font-size: 12px; color: #a0938d; margin-bottom: 16px; letter-spacing: 1px;
             }
             .frag-progress-val { background: #f0e4df; padding: 2px 6px; border-radius: 4px; }
             .frag-task-list { margin-bottom: 20px; }
@@ -147,27 +113,22 @@ window.RochePlugin.register({
             }
             .frag-task-check.done { background: #d4a373; }
             
-            /* 日程细节 */
             .frag-schedule-item { display: flex; gap: 12px; margin-bottom: 16px; }
             .frag-time { font-weight: bold; color: #d4a373; flex-shrink: 0; width: 45px; }
             .frag-activity { color: #5c4b43; }
             
-            /* 私密记事细节 */
             .frag-note-text {
               background: #fffaf0; padding: 16px; border-radius: 12px;
               border-left: 4px solid #fae1dd; line-height: 1.6; font-family: "KaiTi", "STKaiti", serif;
               font-size: 15px; color: #8c7366;
             }
             
-            /* 便利贴 */
             .frag-sticky {
               background: #fff9e6; border: 1px solid #ffebb5; padding: 12px 16px;
               border-radius: 8px; font-size: 12px; color: #a68a47; position: relative;
               margin-top: 20px; line-height: 1.5;
             }
-            .frag-sticky::before {
-              content: '📌'; position: absolute; top: -10px; left: -10px; font-size: 18px;
-            }
+            .frag-sticky::before { content: '📌'; position: absolute; top: -10px; left: -10px; font-size: 18px; }
             
             .nest-loading { font-size: 13px; color: #d4a373; margin-top: 10px; display: none; }
           `;
@@ -214,7 +175,6 @@ window.RochePlugin.register({
                   <div class="frag-tab" data-target="frag-notes">私密记事</div>
                 </div>
                 <div class="frag-content">
-                  <!-- 面板1: 今日计划 -->
                   <div id="frag-plan" class="frag-panel active">
                     <div class="frag-progress-bar">
                       <span>TODAY</span>
@@ -227,15 +187,11 @@ window.RochePlugin.register({
                       这是 <span id="sticky-char-name" style="font-weight:bold;">TA</span> 今天的自动行程表。虽然你不能帮TA做，但可以监督TA哦。
                     </div>
                   </div>
-                  
-                  <!-- 面板2: 日程 -->
                   <div id="frag-schedule" class="frag-panel">
                     <div id="schedule-list">
                        <div style="text-align:center; color:#ccc; margin-top:20px;">生成中...</div>
                     </div>
                   </div>
-                  
-                  <!-- 面板3: 私密记事 -->
                   <div id="frag-notes" class="frag-panel">
                     <div id="notes-content" class="frag-note-text">读取心声中...</div>
                   </div>
@@ -249,7 +205,6 @@ window.RochePlugin.register({
         const convSelect = document.getElementById("nest-conv-select");
         const layoutEl = document.getElementById("nest-layout");
         
-        // 左侧元素
         const avatarEl = document.getElementById("nest-avatar");
         const charNameEl = document.getElementById("nest-char-name");
         const statusEl = document.getElementById("nest-status");
@@ -257,7 +212,6 @@ window.RochePlugin.register({
         const loadingEl = document.getElementById("nest-loading");
         const actionBtns = container.querySelectorAll(".interact-btn");
         
-        // 右侧元素
         const fragTabs = container.querySelectorAll(".frag-tab");
         const fragPanels = container.querySelectorAll(".frag-panel");
         const planListEl = document.getElementById("plan-list");
@@ -269,7 +223,6 @@ window.RochePlugin.register({
         let activeConvId = "";
         let charContext = null;
 
-        // 标签切换逻辑
         fragTabs.forEach(tab => {
           tab.onclick = () => {
             fragTabs.forEach(t => t.classList.remove("active"));
@@ -279,7 +232,6 @@ window.RochePlugin.register({
           };
         });
 
-        // 辅助函数：显示气泡并带动画
         function showBubble(text) {
           bubbleEl.classList.remove("show");
           setTimeout(() => {
@@ -288,7 +240,6 @@ window.RochePlugin.register({
           }, 100);
         }
 
-        // 加载会话列表
         async function loadConversations() {
           try {
             const list = await roche.conversation.list();
@@ -303,7 +254,6 @@ window.RochePlugin.register({
           }
         }
 
-        // 获取角色语境（人设+记忆）
         async function fetchContext(convId) {
           let persona = "";
           let avatar = "";
@@ -327,7 +277,6 @@ window.RochePlugin.register({
           return { persona, avatar, name, recentMemories, facts };
         }
 
-        // 切换角色：加载数据[cite: 4]
         convSelect.onchange = async (e) => {
           activeConvId = e.target.value;
           if (!activeConvId) {
@@ -351,7 +300,6 @@ window.RochePlugin.register({
             charNameEl.textContent = charContext.name;
             stickyCharNameEl.textContent = charContext.name;
 
-            // --- 任务1：获取当前心情状态与招呼 ---[cite: 4]
             const statusPrompt = `你是角色。
 设定：\n${charContext.persona}\n
 近期记忆：\n${charContext.recentMemories}\n
@@ -360,9 +308,8 @@ window.RochePlugin.register({
 
             const statusResPromise = roche.ai.chat({ messages: [{ role: "user", content: statusPrompt }], temperature: 0.7 });
 
-            // --- 任务2：获取生活碎片（计划、日程、记事）---[cite: 4]
             const now = new Date();
-            const timeStr = \`\${now.getHours()}:\${now.getMinutes().toString().padStart(2, '0')}\`;
+            const timeStr = `${now.getHours()}:${now.getMinutes().toString().padStart(2, '0')}`;
             
             const fragmentPrompt = `你是角色。当前时间是 ${timeStr}。
 设定：\n${charContext.persona}\n
@@ -384,12 +331,10 @@ window.RochePlugin.register({
 
             const fragmentResPromise = roche.ai.chat({ messages: [{ role: "user", content: fragmentPrompt }], temperature: 0.8 });
 
-            // 并发请求
             const [statusRes, fragmentRes] = await Promise.all([statusResPromise, fragmentResPromise]);
 
-            // 解析状态
             try {
-              const sMatch = statusRes.text.match(/\\{.*\\}/s) || [statusRes.text];
+              const sMatch = statusRes.text.match(/\{.*\}/s) || [statusRes.text];
               const sParsed = JSON.parse(sMatch[0]);
               statusEl.textContent = sParsed.status || "安静休息中";
               showBubble(sParsed.greeting || "你来啦...");
@@ -398,44 +343,40 @@ window.RochePlugin.register({
               showBubble("发呆中，没注意到你...");
             }
 
-            // 解析碎片
             try {
-              const fMatch = fragmentRes.text.match(/\\{.*\\}/s) || [fragmentRes.text];
+              const fMatch = fragmentRes.text.match(/\{.*\}/s) || [fragmentRes.text];
               const fParsed = JSON.parse(fMatch[0]);
               
-              // 渲染计划
               if (fParsed.plan && Array.isArray(fParsed.plan)) {
                 let doneCount = 0;
                 planListEl.innerHTML = fParsed.plan.map(p => {
                   if (p.done) doneCount++;
-                  return \`
+                  return `
                     <div class="frag-task-item">
-                      <div class="frag-task-check \${p.done ? 'done' : ''}"></div>
-                      <div>\${p.task}</div>
+                      <div class="frag-task-check ${p.done ? 'done' : ''}"></div>
+                      <div>${p.task}</div>
                     </div>
-                  \`;
+                  `;
                 }).join("");
                 const pct = Math.round((doneCount / fParsed.plan.length) * 100) || 0;
-                progressEl.textContent = \`完成度: \${pct}%\`;
+                progressEl.textContent = `完成度: ${pct}%`;
               }
 
-              // 渲染日程
               if (fParsed.schedule && Array.isArray(fParsed.schedule)) {
-                scheduleListEl.innerHTML = fParsed.schedule.map(s => \`
+                scheduleListEl.innerHTML = fParsed.schedule.map(s => `
                   <div class="frag-schedule-item">
-                    <div class="frag-time">\${s.time}</div>
-                    <div class="frag-activity">\${s.activity}</div>
+                    <div class="frag-time">${s.time}</div>
+                    <div class="frag-activity">${s.activity}</div>
                   </div>
-                \`).join("");
+                `).join("");
               }
 
-              // 渲染记事
               if (fParsed.notes) {
                 notesContentEl.textContent = fParsed.notes;
               }
 
             } catch(err) {
-              planListEl.innerHTML = \`<div style="color:red;">获取数据出错，请稍后重试</div>\`;
+              planListEl.innerHTML = `<div style="color:red;">获取数据出错，请稍后重试</div>`;
             }
 
           } catch (error) {
@@ -446,7 +387,6 @@ window.RochePlugin.register({
           }
         };
 
-        // 绑定舞台互动事件[cite: 4]
         actionBtns.forEach(btn => {
           btn.onclick = async () => {
             if (!activeConvId || !charContext) return;
@@ -482,7 +422,6 @@ window.RochePlugin.register({
           };
         });
 
-        // 自动加载列表
         await loadConversations();
       },
       
