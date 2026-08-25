@@ -1,0 +1,16 @@
+{
+  "id": "sullyos-features",
+  "name": "SullyOS 小屋与热点",
+  "version": "1.0.0",
+  "description": "复刻 SullyOS 的热点日报与小小窝功能：聚合微博/知乎热榜并可选注入角色聊天上下文；为角色生成每日生活碎片、计划与日程。",
+  "author": "siyin651-lab",
+  "entry": "https://raw.githubusercontent.com/siyin651-lab/rojiayuan/main/sullyos-features.js",
+  "hash": "",
+  "permissions": [
+    "character:read",
+    "memory:read",
+    "ai:chat",
+    "storage",
+    "ui"
+  ]
+}
